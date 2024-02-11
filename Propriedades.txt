@@ -1,0 +1,173 @@
+## Aplicando CSS
+
+Há três formas de aplicar o css dentro do html sendo:
+
+**Inline** = Aplica dentro das tags html, exemplo:
+
+<tag style="color:white">Exemplo 01</fechatag>
+
+Não muito utilizado, porem tem maior prioridade.
+
+
+
+**Interno** = vai dentro do head da pagina html, basta declarar:
+
+<style>
+    todo a estilização vem aqui dentro, sepados por seletores
+</style>
+
+
+**Externo** = cria um arquivo com extensão .css, e esse arquivo é referenciado dentro do html
+
+<link rel="stylesheet" type="text/css" href="caminho-onde-encontra-arquivo-.css">
+
+Mais utilizado pois pode ser reaproveitado em todas as paginas html
+
+
+
+------
+
+## Seletores CSS
+
+**Por tipo**: Busca elemento por uma tag HTML especifica.
+
+**Por ID** (#): Busca elemento através do atributo **ID**
+
+**Por classe (.)**: Busca elemento através do atributo **class**
+
+**Universal (*)**: Seleciona todos os elementos HTML
+
+**Atributo ([atrib])**: Seleciona elementos que possuem um atributo especifico em nosso documento HTML e conseguimos buscar atributos com um valor específico.
+
+
+
+### Agrupamento de seletores ###
+
+Para definir um estilo para vários tipos de seletores (de qualquer tipo) basta separar por virgula. Exemplo
+
+.primeiroExemplo, #segundoExemplo, h1{
+
+estilo escolhido
+
+}
+
+
+
+------
+
+## Propriedades ##
+
+
+
+#### Cores ####
+
+**background:** Defini a cor de fundo.
+
+**backgroud-image:** Defini uma imagem de fundo
+
+- **linear-gradient:**  Começa com um tom e vai mudando para outro.
+- **radial-gradient:** Começa com uma cor no centro e muda pra outra
+- **repeating-linear-gradient:**
+- **repeating-radial-gradient:**
+
+**backgroud-size:** Usado para redirecionar a imagem de fundo, aceita os valores:
+
+- **auto, cover, contain**
+- valores em px ou porcentagem
+
+**background-repeat:** defini como a imagem vai se repetir ou não
+
+- **repeat** comportamento padrão se repete na largura e altura
+- **repeat-x:** se repete apenas na largura
+- **repeat y**: repete apenas na altura
+- **space**: se repete em todas as direções na sua totalidade adicionado espaço e necessário
+- **round:**  se repete em todas as direções e redirecionam as imagem para não precisar corta-la
+- **no-repeat:** imagem não repete
+
+**background-position:** defini onde a imagem deve se posicionar (valores em px ou porcentagem, left, rigth, center, top, bottom)
+
+**background-attachment:** Defini como a imagem vai se comporta se tiver uma barra de rolagem(valores possíveis: fixed, scroll e local)
+
+**background-origin:** defini de onde a imagem vai começar.
+
+- padding-box começa após a borda
+- border-box começa dentro da borda
+- content-box começa após o espaçamento do padding
+
+**background-clip** defini de onde a cor vai começar.
+
+- padding-box começa após a borda
+- border-box começa dentro da borda
+- content-box começa após o espaçamento do padding
+- text defini dentro do texto causo houve
+
+**background-blend-mode:** mescla as cores entre as camadas, há vários
+
+ valores que podem ser atribuídos
+
+**color:** Defini a cor da fonte (currentcolor, transparent)
+
+- **Cores pré-definidas:** São 140 cores +/- , que podem ser chamadas diretamente pelo nome em inglês.
+
+- **RGB:** mistura das cores primarias red, green e blue. Utiliza valores de 0 a 255
+- **RGBA:** uma extensão de RGB, pois nela tem como adicionar a transparência da cor de 0.0 a 1.0
+- **Hexadecimal:** utiliza 6 números, sendo que os dois primeiros é pro vermelho, os dois do meio verde e os dois últimos azul, é possível adicionar transparência adicionando mais dois números decimais.
+- **HLS:** adiciona valor da matiz de 0 a 360, valor da saturação de 0% a 100% e o valor da  luminosidade de 0% a 100%
+- **HSLA:** uma extensão de hls, pois nela tem como adicionar a transparência da cor de 0.0 a 1.0
+
+}
+
+​		
+
+#### Imagens e Vídeos ####
+
+**object fit:** utilizada para especificar como um objeto (imagem, vídeo, iframe ou embed) deve ser redimensionado para se ajustar ao seu contêiner
+
+- **fill**: ja é o padrão a imagem fica retorcida para caber no container
+- **contain:** a imagem é redimensionada para caber no container sem perder sua qualidade
+- **cover:**  faz com que a imagem preenche a tela, sem perder sua qualidade
+- **none:** mantem a imagem no tamanho original, cortando o que não caber dentro do container
+- **scale-down:** escolhe estre o contain e o none qual imagem é menor
+
+**object-position:** utilizado para centralizar a imagem, é passado por porcentagem de largura e altura e px e tambem por palavras reservadas como :
+
+- **left**
+- **rigth**
+- **center**
+- **top**
+- **bottom**
+- **start**
+- **end**
+
+
+
+####  Dimensionamento ####
+
+**width:** defini a largura
+
+**height:** defini a altura
+
+**max-width:** define a largura máxima
+
+**min-width:** define a largura mínima
+
+**max-height:** define a altura máxima
+
+**min-height:** define a altura mínima
+
+
+
+#### Espaçamento
+
+**margin:** cria um espaçamento em volta dos elementos (externo) podendo ser nas direções top, rigth, left e bottom
+
+**padding**:  defini um espaçamento dentro dos elementos (interno) podendo ser nas direções top, rigth, left e bottom
+
+**box-sizing**: ajuda a direcionar o tamanho dos itens, sendo o content-box que adiciona a largura e a altura o padding e margin, e por outro lado o border-box que remove da largura e altura o padding e a margin
+
+
+
+❗❗❗ **auto, initial , inherit**: define tamanhos para as propriedades, cada um com sua peculiaridade.
+
+
+
