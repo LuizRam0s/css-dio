@@ -101,9 +101,13 @@ estilo escolhido
 - content-box começa após o espaçamento do padding
 - text defini dentro do texto causo houve
 
-**background-blend-mode:** mescla as cores entre as camadas, há vários
+**background-blend-mode:** mescla as cores entre as camadas, há vários valores que podem ser atribuídos
 
- valores que podem ser atribuídos
+**fonte-family:** Defini o tipo de fonte ja instalado no computador
+
+
+
+ 
 
 **color:** Defini a cor da fonte (currentcolor, transparent)
 
@@ -117,7 +121,101 @@ estilo escolhido
 
 }
 
-​		
+**border-width:**: defini a espessura da borda
+
+**border-style:** defini o estilo da borda
+
+**border-color:** defini a cor da borda
+
+**border-image-source:** Defini uma imagem como borda
+
+**border-radius:**Defini uma curvatura para a borda
+
+**border-image-slice**: defini a repetição por partes na porta usando uma imagem
+
+**@fonte-face:** defini uma fonte não instalada no computador, porem a mesma esta baixada em arquivo com extensão final de .ttf, ❗❗ modo de declaração diferente das propriedades tradicionais (@fonte-face{
+
+fonte-family:
+
+src: url();
+
+})
+
+**@import url():** Importa a fonte personalizada direto do site escolhido
+
+**font-size:** defini o tamanho da fonte
+
+**font-style:** defini o estilo da fonte (normal, italic e oblique)
+
+**font-weight:** defini a espessura da fonte
+
+**font-variant:** Deixa o texto em maiúsculo, diferenciando apenas o tamanho da letra que realmente é maiúscula
+
+**font-stretch:**
+
+**line-height:** defini o espaçamento acima e abaixo do texto
+
+**font:** propriedade resumida
+
+(style variant  weight size/line-height family)
+
+**text-transform:** É responsável por definir quais caracteres vão estar em Maiúsculo, minúsculo, etc.
+
+- capitaliza: transforma todas a inicias das palavras em maiúsculo
+- uppercase: transforma todo o texto em caixa-alta (Maiúsculo)
+- lowercase: transforma todo o texto em Minúsculo
+
+**text-align:** faz o alinhamento  do nosso texto no nosso elemento horizontalmente
+
+**text-decoration** remove linhas do nosso texto
+
+- text-decoration-line: escolhe onde a linha vai se posicionar ou se vai ter linha
+- text-decoration-style: adiciona o estilo de linha
+- text-decoration-color: altera a cor da linha
+- text-decoration-thickness: determina a espessura da linha
+- como definir em uma linha: text-decoration: line style color thickness;
+
+**text-ident:** defini um recuo da primeira linha do nosso texto
+
+**letter-spacing:** defini um espaçamento entre as letras
+
+**word-spacing:** deifini um espaçamento entre as palavras
+
+**white-space** defini como os espaços em branco do texto de um determinado elemento é tratado
+
+- Valores aceitos: normal, nowrap, pre, pre-line, pre-wrap, break-spaces
+
+**word-wrap:** defini se uma palavra muito grande deve ser quebrada ou não para fica na mesma linha
+
+- Valore: normal, break-word
+
+**word-break**: defini quando nosso texto deve ter uma quebra de linha
+
+- valores: normal, break-all, keep-all.
+
+**writing-mode: **Defini a orientação do texto (vertical ou horizontal)
+
+- valores: horizontal-tb, vertical-rl, vertical-lr.
+
+**text-overflow:** Defini a orientação do texto (vertical ou horizontal
+
+- valores: clip, ellipsis, string
+
+**box-shadow** Defini uma sombra no elemento
+
+- valore: r, adicionar nova camada é possivel
+
+**text-shadow:** defini uma sombra no texto
+
+- valores: px px desfalque em px color
+
+**filter: drop-shadow(pxLargura pxAltura pxDesfoque pxPropagaçãoSombra colo);** defini sombra dentro de uma img png
+
+**opacity:** defini a transparencia do elemento de 0.0 a 1.0
+
+**overflow:** Defini como o conteúdo deve ser exibido caso ultrapasse os limites do container
+
+- Valores: visible, hidden, scroll auto
 
 #### Imagens e Vídeos ####
 
@@ -170,4 +268,18 @@ estilo escolhido
 ❗❗❗ **auto, initial , inherit**: define tamanhos para as propriedades, cada um com sua peculiaridade.
 
 
+
+## Unidades de medida ##
+
+
+
+### Absolutas ###
+
+São **medidas fixas, que não se alteram de acordo com o dispositivo onde o site está sendo exibido**. Não existe nenhum elemento ou referência que influencie no seu tamanho. Ou seja, ao declararmos um valor em medida absoluta, o tamanho final da propriedade será o mesmo declarado. 
+
+Mais usada e que iremos focar é na **PX**
+
+### Relativas ###
+
+unidades relativas são calculadas com base em unidades já conhecidas de outro elemento, o que faz com que o resultado possa variar de acordo com o valor da propriedade do elemento no qual estamos nos baseando
 

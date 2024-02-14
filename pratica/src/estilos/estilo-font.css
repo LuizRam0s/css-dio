@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+* {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+@font-face {
+    font-family: display;
+    src: url(../fontes/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+.fonte-exemplo{
+    /*
+    font-family: display;
+    font-size: 1.5em;
+    font-weight: 650;
+    line-height: 32px;
+    */
+    font: 800 1.5em/32px display;
+    
+}
+
+div{
+    background: rgb(169, 255, 228);
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    width: 720px;
+    height: 500px;
+    border: solid 1px black;
+    background-image: url(../imagens-naruto/minato.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-blend-mode: exclusion;
+    overflow: auto;
+}
+
+
+.fonte-exemplo1 {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.fonte-exemplo2 {
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 36px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BLED" 0,
+    "SCAN" -53;
+}
