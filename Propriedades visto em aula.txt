@@ -283,3 +283,28 @@ Mais usada e que iremos focar é na **PX**
 
 unidades relativas são calculadas com base em unidades já conhecidas de outro elemento, o que faz com que o resultado possa variar de acordo com o valor da propriedade do elemento no qual estamos nos baseando
 
+
+
+### PRPRIEDADE DE EXIBIÇÃO ###
+
+**display:** determina como as caixas dos elementos devem se comportar no momento de serem exibidas na tela
+
+- display-block: elemento ocupa até o final da final
+- display-inline: elemento ocupa a largura necessária que tem dentro dele
+- display-inline-block: elemento ocupa a largura necessária que tem dentro dele, porem é possível definir para o elemento uma largura e altura
+- display-none: remove o elemento da pagina
+- visibility: hidden: esconde o elemento, porem mantem o seu espaço
+
+
+
+### POSICIONANDO ELEMENTOS ###
+
+**position:** ajuda a manipular a localização/posição do elemento na nossa pagina
+
+- static: valor padrão
+- relative: desloca o elemento em 4 posições na nossa pagina, top, rigth, left e bottom
+- absolute: desloca o elemento em 4 posições na nossa pagina, top, rigth, left e bottom, ignorando algum elemento caso tiver nela.
+- fixed: elemento fica fixo na pagina
+- sticky: 
+- z-index: defini qual elemento ficara por cima 
+
