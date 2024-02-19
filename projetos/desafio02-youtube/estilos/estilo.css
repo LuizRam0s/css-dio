@@ -1,0 +1,77 @@
+@import url(../estilos/reset.css);
+
+header {
+    height: 56px;
+    padding: 0 24px 0 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+#menu{
+    width: 24px;
+    height: 24px;
+}
+#logo-youtube{
+    max-width: 90px;
+    max-height: 20px;
+}
+#superior-esquerdo{
+    width: 146px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#superior-direito{
+    width: 130px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#superior-direito #imagem-perfil{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+main {
+    width: 952px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    justify-content: space-around;
+    margin-left: 80px;
+}
+main #youtube-player {
+    width: 952px;
+    height: 537px;
+}
+
+h3{
+    width: 871px;
+    height: 23px;
+    font: 600 20px Roboto, serif;
+    text-transform: capitalize;
+    line-height: 23.44px;
+    margin: 0;
+}
+.texto-simples-negrito{
+    font: normal 600 14px/16.41px Roboto, serif;
+}
+.texto-simples{
+    font: normal 400 14px/16.41px Roboto, serif;
+    width: 510px;
+    margin: 0;
+}
+nav{
+   width: 220;
+   height: 938px;
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   top: 56px;
+   left: 1050px;
+   gap: 16px;
+}
+
