@@ -1,0 +1,102 @@
+@import url(../estilos/reset.css);
+
+body{
+    display: grid;
+    grid-template: "header header header header header" 56px
+                    "nav esquerdo esquerdoM direitoM direito" 336px
+                    "nav esquerdo esquerdoM direitoM direito" 336px
+                    "nav esquerdo esquerdoM direitoM direito" 336px
+								/ 218px 1fr 1fr 1fr 1fr;
+}
+header{
+    grid-area: header;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+}
+header #superior-esquerdo{
+    width: 146px;
+    height: 24px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+header #pesquisa{
+    align-self: center;
+}  
+header #superior-direito{
+    width: 130px;
+    height: 34px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}  
+header #superior-direito #imagem-perfil{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+header #superior-direito .imagem-superior{
+    width: 24px;
+    height: 24px;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    padding: 24px; 
+}
+nav .menu{
+    display: inline-flex;
+    font: normal 450 14px/16.41px Poppins;
+    align-items: center;
+    margin-bottom: 22px;
+}
+nav .menu .imagem-menu{
+    margin-right: 12px;
+}
+
+.sugestao-youtube1{
+    padding: 16px;
+    font: normal 600 14px/16.41px Poppins;
+    text-transform: uppercase;
+}
+main img{
+    width: 350px;
+    height: 200px;
+}
+.sugestao-youtube1 div .img-tipo1{
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.sugestao-youtube1 .alinhando{
+    display: flex;
+    margin: 10px 0;
+}
+
+.sugestao-youtube1 .texto2{
+    font: normal 400 12px/16.41px Poppins;
+    text-transform: none;
+    margin: 0 0 5px 50px;
+}
+
+.lado-esquerdoM{
+    grid-area: esquerdo;
+}
+.lado-direito{
+    grid-area: direito;
+}
+
+.lado-esquerdo-centro{
+    grid-area: esquerdoM;
+}
+.lado-direito-meio{
+    grid-area: direitoM;
+}
+.img-tamanho{
+    width: 380px;
+    height: 197px;
+}
