@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        body{
+            font: normal 300 1.4rem arial;
+        }
+/*Exemplo com first-letter*/
+        .first-letter ::first-letter{
+            color: rgb(170, 118, 230);
+            margin-left: 10px;
+            background-color:antiquewhite;
+        }
+/*exemplo com first-line*/
+        .first-line p::first-line{
+            color: cadetblue;
+            font-size: 1.5rem;
+            background-color: beige;
+        }
+/*exemplo com backdrop*/
+        video{
+            width: 80%;
+            height: 600px;
+        }
+        video::backdrop{
+            background-color: blanchedalmond;
+        }
+/*exemplo com marker*/
+        summary::marker{
+            content: "➠";
+            color: rgb(17, 212, 43);
+        }
+        .marker li::marker{
+            content:"☯";
+            color: rgb(45, 119, 94);
+        }
+/*exemplo com place-holder*/
+        .placeholder input::placeholder{
+            color: aqua;
+            background-color: antiquewhite;
+        }
+/*exemplo com selection*/
+        .selection ::selection{
+            background-color: moccasin;
+            color: aquamarine;
+        }
+/*exemplo com file-selector-button*/
+        .file input::file-selector-button{
+            border: 2px solid red;
+            background-color: rgb(230, 90, 90);
+        }
+/*exemplo com before e after*/
+        .antes-depois{
+            background: url("pratica/src/imagens-hogwarts/castelo-principal2.jpg") no-repeat;
+            background-size: cover;
+            border: 1px solid mediumblue;
+            width: 1000px;
+            height: 600px;
+            border-radius: 8px;
+            position: relative;
+            margin: auto;
+        }
+        .antes-depois::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(transparent, rgb(201, 233, 165));
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo-elementos</h1>
+    <p>Usado para adicionar elementos extras na pagina, sem a necessidade de declarã-lo no html, ou para selecionar alguma parte de algum elemento.</p>
+    <p>Identificado por :: palavra chave</p>
+
+    <section class="first-letter">
+    <h2>Pseudo-elementos - ::first-letter</h2>
+    <p>Selecina a primeira letra da primeira linha</p>
+    <p>Propriedades disponiveis:</p>
+    <ul>
+        <li>color</li>
+        <li>background</li>
+        <li>margin</li>
+        <li>padding</li>
+        <li>border</li>
+        <li>font</li>
+        <li>Propriedade de texto</li>
+    </ul>
+    </section>
+<hr>
+    <section class="first-line">
+        <h2>Pseudo-elementos - ::first-line</h2>
+        <p>Seleciona a primeira linha de um texto</p>
+        <p>Propriedades disponivel</p>
+        <ul>
+            <li>color</li>
+            <li>backgound</li>
+            <li>font</li>
+            <li>propriedade de texto</li>
+        </ul>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero assumenda dolorem quisquam quam incidunt dignissimos repellendus, esse ipsa vel qui iusto a nesciunt atque laudantium? Non nulla perspiciatis culpa enim!</p>
+    </section>
+<hr>
+    <section>
+        <h2>Pseudo-elemento - ::backdrop</h2>
+        <p>Esteliza o plano de fundo de um elemento em modo de tela cheia como dialog ou video</p>
+
+        <video controls>
+            <source src="pratica/src/imagens-naruto/20240207_121732.mp4">
+        </video>
+    </section>
+<hr>
+    <section class="marker">
+        <h1>Pseudo-elemento - ::marker</h1>
+        <p>Permite estilizar os topicos ou numeros de uma lista ou entao a flexa de um elemento summary</p>
+        <details>
+        <summary>Propriedades aceitas:
+        </details>
+            <ul>
+                <li>color</li>
+                <li>content</li>
+                <li>white-space</li>
+                <li>font</li>
+                <li>animation</li>
+                <li>transition</li>
+            </ul>
+        </summary>
+    </section>
+<hr>
+    <section class="placeholder">
+        <h1>Pseudo-elemento - ::place-holder</h1>
+        <p>Um place-holder é uma dica para ajudar no preenchimento de algum campo de formulario. </p>
+        <P>Propriedades aceitas:</P>
+        <ul>
+            <li>color</li>
+            <li>font</li>
+            <li>backgound</li>
+            <li>text</li>
+        </ul>
+        <p>Exemplo:</p>
+        <label for="nome">Nome</label>
+        <input name="nome" type="text" placeholder="Luiz Fernando">
+        <label for="senha">Senha</label>
+        <input name="senha" type="password" placeholder="Minimo 10 caracteres">
+    </section>
+<hr>
+    <section class="selection">
+        <h1>Pseudo-elemento - ::selection</h1>
+        <p>Permite estilizar a seleção de textos no navegador</p>
+        <p>Propriedades aceitas:</p>
+        <ul>
+            <li>background-color</li>
+            <li>color</li>
+            <li>text</li>
+        </ul>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sunt natus, autem animi sit perferendis saepe possimus provident unde vero corporis illum ipsam eveniet veniam deserunt repudiandae. In, unde a?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti et fuga esse quo soluta porro veniam delectus laborum culpa, enim harum. Vero similique nulla laudantium reprehenderit natus illo assumenda esse.</p>
+    </section>
+<hr>
+<section class="file">
+    <h1>Pseudo-elemento -::file-selector-button</h1>
+    <p>Permite estilizar a seleção de textos no navegador</p>
+
+    <form>
+        <label for="fileUpload">Upload de arquivos</label>
+        <input type="file" name="fileUpload">
+    </form>
+</section>
+<hr>
+    <section class="antes-depois">
+        
+    </section>
+</body>
+</html>

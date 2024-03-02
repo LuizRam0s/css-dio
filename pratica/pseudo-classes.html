@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*exemplo hover*/
+        .houver button {
+            border: none;
+            width: 20vh;
+            height: 30px;
+            background-color: black;
+            border-radius: 8px;
+        }
+
+        .houver button a {
+            text-decoration: none;
+            color: aqua;
+        }
+
+        .houver button:hover {
+            background-color: aqua;
+            color: black;
+        }
+
+        .houver button:hover a {
+            color: black;
+            cursor: pointer;
+        }
+
+        .houver div {
+            background-color: antiquewhite;
+            margin-top: 20px;
+            border: 8px double burlywood;
+            width: 600px;
+            height: 600px;
+        }
+
+        .houver div:hover {
+            background-image: url("src/imagens-hogwarts/castelo-principal.webp");
+            background-position: center;
+            border: none;
+        }
+
+        /*exemplo active*/
+        .houver button:active {
+            background-color: rgb(109, 77, 36);
+        }
+
+        .houver button:active a {
+            color: blue;
+        }
+
+        .houver div:active {
+            background: aquamarine;
+            border: 8px groove royalblue;
+        }
+
+        /*exemplo com tippos focus*/
+        .focus label,
+        button {
+            display: block;
+            margin: 12px;
+            font-size: 1.5rem;
+        }
+
+        input,
+        select,
+        option {
+            font-size: 1.5rem;
+        }
+
+        .focus input:focus {
+            outline: 2px groove greenyellow;
+            background-color: antiquewhite;
+        }
+
+        .focus select:focus {
+            outline: 2px dashed darkturquoise;
+            background-color: bisque;
+        }
+
+        .focus label:focus-within {
+            color: blueviolet;
+        }
+
+        .focus button:focus {
+            outline: 1px solid darkblue;
+            color: aliceblue;
+            background-color: blueviolet;
+        }
+
+        /*exemplo enabled e disabled*/
+        .enabled-disabled :disabled {
+            color: rgb(207, 203, 181);
+            background-color: rgb(196, 192, 192);
+        }
+
+        .enabled-disabled :enabled {
+            color: blueviolet;
+            background-color: black;
+        }
+
+        /*exemplo link e visited*/
+        .link-visited a:link {
+            background-color: crimson;
+            color: antiquewhite;
+        }
+
+        .link-visited a:visited {
+            background-color: rgb(236, 164, 179);
+            color: rgb(96, 126, 126);
+        }
+
+        /*exemplo checked e indeterminate*/
+        .checked-indeterminate input {
+            accent-color: darkgreen;
+        }
+
+        .checked-indeterminate input:checked {
+            box-shadow: 0 0 5px 3px rgb(42, 182, 128);
+            color: aqua;
+        }
+
+        .checked-indeterminate input:checked+label {
+            color: rgb(43, 199, 29);
+            text-decoration: underline;
+        }
+
+        .checked-indeterminate progress:indeterminate {
+            accent-color: rgb(129, 231, 82);
+        }
+        /*exemplo valid e invalid*/
+        .valid-invalid .formulario{
+            background-color: #e2dfdf;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid gray;
+            width: 300px;
+            padding: 10px;
+            margin-top: 20px;
+            gap: 10px;
+            border-radius: 8px;
+        }
+        .valid-invalid .formulario input:valid{
+            border: 1px solid green;
+            color: greenyellow;
+        }
+        .valid-invalid .formulario input:invalid{
+            border:1px solid red;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo-classe</h1>
+    <p>Uma pseudo-classe CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento
+        selecionado. Por exemplo, :hover pode ser usado para alterar a cor de um botão quando o usuário passar o cursor
+        sobre ele.</p>
+    <hr>
+    <section class="houver">
+        <h2>Pseudo-classe | :hover</h2>
+        <p>Usado para alterar um elemento quando se passsa o mouse em cima</p> <br>
+        <h2>Pseudo-classe | :active</h2>
+        <p>Quando acionado (usado mais em button ou link) o elemento muda para o aspecto programado</p>
+
+        <button><a href="https://web.dio.me/">DIO.me</a></button>
+        <div></div>
+    </section>
+    <hr>
+    <section class="focus">
+        <h1>Pseudo-classe | :focus, :focus-within e :focus-visible</h1>
+
+        <form>
+            <p>Faça seu pedido! Escolha o sabor do sorvete que vc deseja</p>
+            <label>
+                Nome completo
+                <input type="text" name="nome">
+            </label>
+            <label>
+                Sabor do sorvete
+                <select name="Sabor">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="morango">Morango</option>
+                    <option value="flocus">Flocus</option>
+                    <option value="uva">Uva</option>
+                    <option value="abacaxi">Abacaxi</option>
+                </select>
+            </label>
+            <button>Solicitar pedido</button>
+        </form>
+    </section>
+    <hr>
+    <section class="enabled-disabled">
+        <h2>Pseudo-classe |:enabled e :disabled</h2>
+        <button disabled>Com disabled</button>
+        <button>Com enabled</button>
+    </section>
+    <hr>
+    <section class="link-visited">
+        <h2>Pseudo-classe | :link e :visited</h2>
+        <a href="https://www.youtube.com/">YouTube</a"> <br>
+            <a href="https://www.w3schools.com/">W3schools</a> <br>
+            <a href="https://www.w3schoolsd.com/">W3schools</a>
+
+    </section>
+    <hr>
+    <section class="checked-indeterminate">
+        <h2>Pseudo-classe | :checked e :indeterminate</h2>
+        <div>
+            <input name="task-01" type="checkbox">
+            <label for="task-01">Tarefa 01</label>
+        </div>
+        <div>
+            <input name="task-02" type="checkbox">
+            <label for="task-02">Tarefa 02</label>
+        </div>
+        <div>
+            <input name="task-03" type="checkbox">
+            <label for="task-03">Tarefa 03</label>
+        </div>
+        <div>
+            <input name="task-04" type="checkbox">
+            <label for="task-04">Tarefa 04</label>
+        </div>
+        <div>
+            <input name="task-05" type="checkbox">
+            <label for="task-05">Tarefa 05</label>
+        </div>
+        <div>
+            <input name="task-06" type="checkbox">
+            <label for="task-06">Tarefa 06</label>
+        </div>
+
+        <progress></progress>
+    </section>
+    <hr>
+    <section class="valid-invalid">
+        <form>
+            <h2>Pseudo-classe</h2>
+            <div>
+                <input name="task-01" type="checkbox">
+                <label for="task-01">:invalid</label>
+            </div>
+            <div>
+                <input name="task-02" type="checkbox">
+                <label for="task-02">:valid</label>
+            </div>
+            <div>
+                <input name="task-03" type="checkbox">
+                <label for="task-03">:in-range</label>
+            </div>
+            <div>
+                <input name="task-04" type="checkbox">
+                <label for="task-04">:out-of-range</label>
+            </div>
+            <div class="formulario">
+                <form>
+                    <h3>Faça sua compra:</h3>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email">
+
+                    <label for="codigo-pruduto">Codigo Produto:</label>
+                    <input type="number" name="codigo-pruduto" min="100">
+
+                    <label for="cupom">Cupom de Desconto:</label>
+                    <input type="text" name="cupom" pattern="[a-z]+" placeholder="Apenas letras minusculas">
+
+                    <label for="data-nascimento"> Data de Nascimento:</label>
+                    <input type="date" name="data-nascimento" min="1962-01-01" max="2004-12-31">
+
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" name="quantidade" min="3" max="10">
+
+                    <label>
+                        <input type="checkbox" required>
+                        <span>Li e aceito os termos de uso</span>
+                    </label>
+
+                    <button type="submit">Comprar</button>
+                </form>
+            </div>
+    </section>
+</body>
+
+</html>
